@@ -1,101 +1,53 @@
-import Image from "next/image";
+import { Grid } from "@/components/Grid/Grid";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <Grid className="grid-rows-[auto_1fr] p-8">
+      <nav className="flex col-span-12 justify-between">
+        <div className="flex flex-col gap-4">
+          <div className="text-5xl font-bold">Sjors de Groot</div>
+          <div className="text-3xl text-accent">transpersoonlijke coaching</div>
         </div>
+        <div className="flex h-fit gap-4 text-lg mt-5">
+          <div className="underline-offset-4 cursor-pointer hover:underline">
+            Home
+          </div>
+          <div className="underline-offset-4 cursor-pointer hover:underline">
+            Transpersoonlijke coaching
+          </div>
+          <div className="underline-offset-4 cursor-pointer hover:underline">
+            Over mij
+          </div>
+          <div className="underline-offset-4 cursor-pointer hover:underline">
+            Tarief
+          </div>
+          <div className="underline-offset-4 cursor-pointer hover:underline">
+            Contact
+          </div>
+        </div>
+      </nav>
+      <main className="col-start-2 col-span-10 flex flex-col gap-6 grow justify-center text-lg">
+        <p>Transpersoonlijk betekend letterlijk: voorbij je persoonlijkheid.</p>
+
+        <p>
+          Je persoonlijkheid is de verzameling van jouw persoonlijke
+          eigenschappen en deze verzameling van eigenschappen bepaalt je manier
+          van denken en reageren.
+        </p>
+
+        <p>
+          Jouw kijk op jezelf, de wereld en het leven wordt sterk gekleurd door
+          de gebeurtenissen en overtuigingen die je persoonlijkheid hebben
+          gevormd.
+        </p>
+
+        <p>
+          Bij mijn manier van coachen gaat het om voorbij je persoonlijkheid,
+          met al haar overtuigingen, verbinding te maken met je innerlijke stem
+          om van daaruit jóuw antwoorden te vinden op vragen over concrete
+          situaties en de stappen die genomen kunnen worden voor verandering.
+        </p>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </Grid>
   );
 }

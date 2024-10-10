@@ -8,20 +8,20 @@ export default function Home() {
           <div className="text-5xl font-bold">Sjors de Groot</div>
           <div className="text-3xl text-accent">transpersoonlijke coaching</div>
         </div>
-        <div className="flex h-fit gap-4 text-lg mt-5">
-          <div className="underline-offset-4 cursor-pointer hover:underline">
+        <div className="flex h-fit gap-6 text-lg mt-[10px] tracking-normal">
+          <div className="cursor-pointer border-b border-b-slate-300 hover:border-b-slate-700">
             Home
           </div>
-          <div className="underline-offset-4 cursor-pointer hover:underline">
+          <div className="cursor-pointer border-b border-b-slate-300 hover:border-b-slate-700">
             Transpersoonlijke coaching
           </div>
-          <div className="underline-offset-4 cursor-pointer hover:underline">
+          <div className="cursor-pointer border-b border-b-slate-300 hover:border-b-slate-700">
             Over mij
           </div>
-          <div className="underline-offset-4 cursor-pointer hover:underline">
+          <div className="cursor-pointer border-b border-b-slate-300 hover:border-b-slate-700">
             Tarief
           </div>
-          <div className="underline-offset-4 cursor-pointer hover:underline">
+          <div className="cursor-pointer border-b border-b-slate-300 hover:border-b-slate-700">
             Contact
           </div>
         </div>

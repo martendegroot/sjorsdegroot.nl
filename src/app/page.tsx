@@ -26,7 +26,7 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <main className="col-start-2 col-span-10 flex flex-col gap-6 grow justify-center text-lg">
+      <main className="col-start-2 col-span-8 flex flex-col gap-6 grow justify-center text-lg">
         <p>Transpersoonlijk betekend letterlijk: voorbij je persoonlijkheid.</p>
 
         <p>

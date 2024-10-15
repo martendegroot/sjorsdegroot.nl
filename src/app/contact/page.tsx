@@ -1,7 +1,7 @@
 import { Grid } from "@/components/Grid";
 import Navigation from "@/components/Navigation";
 
-export default function Home() {
+export default function Contact() {
   return (
     <Grid className="grid-rows-[auto_1fr] p-8">
       <Navigation />

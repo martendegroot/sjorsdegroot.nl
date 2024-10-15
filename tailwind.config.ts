@@ -16,6 +16,10 @@ const config: Config = {
         foreground: "var(--foreground)",
         accent: "#ed7d31",
       },
+      fontFamily: {
+        sans: "var(--font-quicksand)",
+        logo: "var(--font-yi-baiti)",
+      },
     },
   },
   plugins: [],

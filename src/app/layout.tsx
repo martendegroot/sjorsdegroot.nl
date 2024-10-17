@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
+import { Grid } from "@/components/Grid";
+import Navigation from "@/components/Navigation/Navigation";
 
 const yiBaiti = localFont({
   src: "./fonts/MicrosoftYiBaiti.ttf",
@@ -30,7 +32,10 @@ export default function RootLayout({
       <body
         className={`${yiBaiti.variable} ${quicksand.variable} font-sans antialiased tracking-wider flex min-h-screen`}
       >
-        {children}
+        <Grid className="grid-rows-[auto_1fr] px-2 py-4 sm:p-8 overflow-hidden">
+          <Navigation />
+          {children}
+        </Grid>
       </body>
     </html>
   );

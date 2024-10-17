@@ -20,6 +20,9 @@ const config: Config = {
         sans: "var(--font-quicksand)",
         logo: "var(--font-yi-baiti)",
       },
+      transitionProperty: {
+        width: "width",
+      },
     },
   },
   plugins: [],

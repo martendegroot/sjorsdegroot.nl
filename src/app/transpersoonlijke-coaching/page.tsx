@@ -1,5 +1,5 @@
 import { Grid } from "@/components/Grid";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation/Navigation";
 
 export default function TranspersoonlijkeCoaching() {
   return (

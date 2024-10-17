@@ -12,6 +12,7 @@ const yiBaiti = localFont({
 const quicksand = Quicksand({
   subsets: ["latin"],
   variable: "--font-quicksand",
+  display: "block",
 });
 
 export const metadata: Metadata = {

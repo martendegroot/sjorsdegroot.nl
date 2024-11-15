@@ -10,6 +10,7 @@ export default function Home() {
         src={profilePic}
         alt="Foto van Sjors"
         className="absolute bottom-0 h-[90vh] w-auto -z-10 left-[55vw]"
+        quality={100}
       />
     </main>
   );

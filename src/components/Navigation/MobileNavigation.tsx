@@ -1,70 +1,79 @@
-import { cx } from "class-variance-authority";
+"use client";
+
 import { Logo } from "./Logo";
 import { Route } from "@/app/routes";
 import { NavLink } from "./NavLink";
+import { Drawer, DrawerContent, DrawerTrigger } from "../Drawer";
+import { cx } from "class-variance-authority";
+import { useState } from "react";
 
 interface MobileNavigationProps {
   menuItems: Route[];
 }
 
-export const MobileNavigation = ({ menuItems }: MobileNavigationProps) => (
-  <section className="lg:hidden">
-    <input
-      className="absolute top-5 right-0 h-7 w-8 z-10 opacity-0 peer"
-      type="checkbox"
-      name=""
-      id=""
-    />
-    <Logo className="transition-opacity duration-500 peer-checked:opacity-0 peer-checked:pointer-events-none" />
-    <figure
-      className={cx([
-        "absolute",
-        "top-5",
-        "right-0",
-        "h-[26px]",
-        "w-8",
-        "flex",
-        "flex-col",
-        "justify-between",
-        "peer-checked:[&>*:nth-child(1)]:rotate-45",
-        "peer-checked:[&>*:nth-child(2)]:scale-0",
-        "peer-checked:[&>*:nth-child(3)]:-rotate-45",
-      ])}
-    >
-      {["origin-top-left", "", "origin-bottom-left"].map((classes, n) => (
-        <div
-          key={n}
-          className={cx(
-            "h-1 w-full bg-neutral-700 transition-transform duration-500",
-            classes
-          )}
-        ></div>
-      ))}
-    </figure>
-    <article
-      className={cx(
-        "absolute",
-        "top-24",
-        "-left-8",
-        "h-[calc(100vh-96px-16px)]",
-        "w-0",
-        "bg-background",
-        "transition-width",
-        "ease-in",
-        "duration-500",
-        "overflow-hidden",
-        "flex",
-        "peer-checked:w-[calc(100%+64px)]",
-        "peer-checked:[&>*]:opacity-100"
-      )}
-    >
-      <menu className="h-full w-full flex flex-col gap-8 items-center opacity-0 transition-opacity duration-500 delay-100 whitespace-nowrap">
-        {menuItems.map((route) => (
-          <li key={route.label}>
-            <NavLink route={route} />
-          </li>
-        ))}
-      </menu>
-    </article>
-  </section>
-);
+export const MobileNavigation = ({ menuItems }: MobileNavigationProps) => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+
+  const handleHamburgerClick = () => {
+    console.log("hellos");
+    setOpenDrawer((current) => !current);
+  };
+
+  return (
+    <section className="lg:hidden flex justify-between">
+      <Logo />
+      <Drawer
+        shouldScaleBackground
+        direction="right"
+        open={openDrawer}
+        onOpenChange={setOpenDrawer}
+      >
+        <DrawerTrigger className="group">
+          <figure
+            className={cx([
+              "absolute",
+              "top-7",
+              "right-7",
+              "h-[22px]",
+              "z-[60]",
+              "w-7",
+              "flex",
+              "flex-col",
+              "justify-between",
+              "group-data-[state=open]:[&>*:nth-child(1)]:rotate-45",
+              "group-data-[state=open]:[&>*:nth-child(2)]:scale-0",
+              "group-data-[state=open]:[&>*:nth-child(3)]:-rotate-45",
+            ])}
+          >
+            {["origin-top-left", "", "origin-bottom-left"].map((classes, n) => (
+              <div
+                key={n}
+                className={cx(
+                  "h-[3px] w-full bg-neutral-700 transition-transform duration-500 rounded-sm",
+                  classes
+                )}
+              ></div>
+            ))}
+          </figure>
+        </DrawerTrigger>
+        <DrawerContent>
+          <button
+            className="absolute top-5 right-7 background-red w-8 h-7"
+            onClick={handleHamburgerClick}
+          />
+          <menu className="flex flex-col h-full mb-[20vh] justify-center gap-10">
+            {menuItems.map((route) => (
+              <li
+                key={route.label}
+                className="text-center"
+                onClick={handleHamburgerClick}
+              >
+                <NavLink route={route} />
+              </li>
+            ))}
+          </menu>
+        </DrawerContent>
+      </Drawer>
+    </section>
+  );
+};

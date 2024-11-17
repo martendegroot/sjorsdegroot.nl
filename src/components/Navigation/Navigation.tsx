@@ -7,7 +7,7 @@ const menuItems = [home, transpersoonlijkeCoaching, overMij, tarief, contact];
 
 export default function Navigation() {
   return (
-    <nav className="col-span-12 relative">
+    <nav className="col-span-12">
       <DesktopNavigation menuItems={menuItems} />
       <MobileNavigation menuItems={menuItems} />
     </nav>

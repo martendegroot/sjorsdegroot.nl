@@ -3,7 +3,7 @@
 import { Logo } from "./Logo";
 import { Route } from "@/app/routes";
 import { NavLink } from "./NavLink";
-import { Drawer, DrawerContent, DrawerTrigger } from "../Drawer";
+import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "../Drawer";
 import { cx } from "class-variance-authority";
 import { useState } from "react";
 
@@ -15,7 +15,6 @@ export const MobileNavigation = ({ menuItems }: MobileNavigationProps) => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleHamburgerClick = () => {
-    console.log("hellos");
     setOpenDrawer((current) => !current);
   };
 
@@ -56,7 +55,8 @@ export const MobileNavigation = ({ menuItems }: MobileNavigationProps) => {
             ))}
           </figure>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent aria-describedby="Navigatiemenu">
+          <DrawerTitle className="sr-only">Navigatiemenu</DrawerTitle>
           <button
             className="absolute top-5 right-7 background-red w-8 h-7"
             onClick={handleHamburgerClick}

@@ -12,6 +12,7 @@ export default function Home() {
       </p>
       <div className="absolute bottom-0 right-0 w-full h-full isolate overflow-hidden -z-10">
         <Image
+          priority
           src={profilePic}
           alt="Foto van Sjors"
           sizes="(min-width: 1280px) 100vh, 110vh"

@@ -10,7 +10,7 @@ export default function Home() {
       <p className="text-2xl lg:text-3xl max-w-[40vw] sm:max-w-none">
         en wat je werkelijk wil
       </p>
-      <div className="absolute bottom-0 right-0 w-full h-full isolate overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-full h-full isolate overflow-hidden -z-10">
         <Image
           src={profilePic}
           alt="Foto van Sjors"

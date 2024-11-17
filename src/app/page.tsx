@@ -16,7 +16,7 @@ export default function Home() {
           src={profilePic}
           alt="Foto van Sjors"
           sizes="(min-width: 1280px) 100vh, 110vh"
-          className="absolute bottom-0 h-[110vh] xl:h-full object-cover lg:object-contain object-[calc(20em_-_40vh)_15vh] sm:object-[40vw_20vh] xl:object-[right_10vh] 2xl:object-[calc(50%_+_400px)_5vh]"
+          className="absolute bottom-0 h-[110vh] xl:h-full object-cover lg:object-contain object-[calc(20em_-_40vh)_20vh] sm:object-[40vw_20vh] xl:object-[right_10vh] 2xl:object-[calc(50%_+_400px)_5vh]"
           quality={100}
         />
       </div>

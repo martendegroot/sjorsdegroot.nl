@@ -3,15 +3,21 @@ import profilePic from "public/profile.webp";
 
 export default function Home() {
   return (
-    <main className="col-start-2 col-span-10 flex flex-col gap-6 grow justify-center text-3xl mb-[15vh]">
-      <p>Ontdekken wie je bent</p>
-      <p>en wat je werkelijk wil</p>
-      <Image
-        src={profilePic}
-        alt="Foto van Sjors"
-        className="absolute bottom-0 h-[90vh] w-auto -z-10 left-[55vw]"
-        quality={100}
-      />
-    </main>
+    <>
+      <p className="mt-5 text-2xl lg:text-3xl max-w-[40vw] sm:max-w-none">
+        Ontdekken wie je bent
+      </p>
+      <p className="text-2xl lg:text-3xl max-w-[40vw] sm:max-w-none">
+        en wat je werkelijk wil
+      </p>
+      <div className="absolute bottom-0 right-0 w-full h-full isolate overflow-hidden">
+        <Image
+          src={profilePic}
+          alt="Foto van Sjors"
+          className="absolute bottom-0 h-[110vh] xl:h-full object-cover xl:object-contain object-[calc(20em_-_40vh)_15vh] sm:object-[40vw_20vh] xl:object-[right_10vh] 2xl:object-[calc(50%_+_400px)_5vh]"
+          quality={100}
+        />
+      </div>
+    </>
   );
 }

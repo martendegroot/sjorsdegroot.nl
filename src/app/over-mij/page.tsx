@@ -1,6 +1,6 @@
 export default function OverMij() {
   return (
-    <main className="col-start-2 col-span-8 flex flex-col gap-6 grow justify-center text-lg mb-[15vh]">
+    <>
       <p>
         Vanaf mijn 26e werkte ik als zelfstandig meubelmaker. Ik ben ruim
         twintig jaar getrouwd geweest, daarna gescheiden, en vader van twee
@@ -14,6 +14,6 @@ export default function OverMij() {
         aanwezig innerlijk weten beschikbaar is dat me rust geeft en de weg
         wijst.
       </p>
-    </main>
+    </>
   );
 }

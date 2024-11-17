@@ -1,6 +1,6 @@
 export default function TranspersoonlijkeCoaching() {
   return (
-    <main className="col-start-2 col-span-8 flex flex-col gap-6 grow justify-center text-lg mb-[15vh]">
+    <>
       <p>Transpersoonlijk betekend letterlijk: voorbij je persoonlijkheid.</p>
 
       <p>
@@ -20,6 +20,6 @@ export default function TranspersoonlijkeCoaching() {
         daaruit jóuw antwoorden te vinden op vragen over concrete situaties en
         de stappen die genomen kunnen worden voor verandering.
       </p>
-    </main>
+    </>
   );
 }

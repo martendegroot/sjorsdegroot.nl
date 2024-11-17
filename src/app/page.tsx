@@ -14,7 +14,7 @@ export default function Home() {
         <Image
           src={profilePic}
           alt="Foto van Sjors"
-          className="absolute bottom-0 h-[110vh] xl:h-full object-cover xl:object-contain object-[calc(20em_-_40vh)_15vh] sm:object-[40vw_20vh] xl:object-[right_10vh] 2xl:object-[calc(50%_+_400px)_5vh]"
+          className="absolute bottom-0 h-[110vh] xl:h-full object-cover lg:object-contain object-[calc(20em_-_40vh)_15vh] sm:object-[40vw_20vh] xl:object-[right_10vh] 2xl:object-[calc(50%_+_400px)_5vh]"
           quality={100}
         />
       </div>

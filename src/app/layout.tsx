@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body
-        className={`${yiBaiti.variable} ${quicksand.variable} font-sans antialiased tracking-wider flex min-h-screen`}
+        className={`${yiBaiti.variable} ${quicksand.variable} font-sans antialiased tracking-wider flex min-h-dvh`}
       >
         <Grid className="grid-rows-[auto_1fr] px-2 py-4 sm:p-8 overflow-hidden pb-10">
           <Navigation />
